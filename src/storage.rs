@@ -11,7 +11,7 @@ impl Storage{
         let mut file = OpenOptions::new().read(true)
             .write(true)
             .create(true)
-            .open(format!("{}.json",program))?;
+            .open(format!("./json/{}.json",program))?;
 
         let mut students: Vec<Student> = if file.metadata()?.len() == 0{
             Vec::new()
